@@ -3,6 +3,7 @@ import {Item} from "@/item";
 import {Sulfuras} from "@/products/sulfuras";
 import {Conjured} from "@/products/conjured";
 import {AgedBrie} from "@/products/aged.brie";
+import {BackStage} from "@/products/backStage";
 
 describe('Gilded Rose', () => {
   it('should execute the app and match the golden master output', () => {
@@ -21,9 +22,9 @@ function appTest(): string {
     new Item("Elixir of the Mongoose", 5, 7), //
     new Sulfuras(0), //
     new Sulfuras(-1),
-    new Item("Backstage passes to a TAFKAL80ETC concert", 15, 20),
-    new Item("Backstage passes to a TAFKAL80ETC concert", 10, 49),
-    new Item("Backstage passes to a TAFKAL80ETC concert", 5, 49),
+    new BackStage(15, 20),
+    new BackStage(10, 49),
+    new BackStage(5, 49),
     new Conjured("Mana Cake", 3, 6)];
 
 
