@@ -2,7 +2,7 @@ import {AgedBrie} from "@/products/aged.brie";
 import {Product} from "@/products/product";
 import {AGED_BRIE} from "@/products/product-type-names";
 
-describe('Aged brie Item', () => {
+describe('Aged brie Product', () => {
   it('should create the product named Aged Brie', () => {
     const agedBrie: Product = new AgedBrie(3, 6);
     expect(agedBrie.name).toBe(AGED_BRIE);

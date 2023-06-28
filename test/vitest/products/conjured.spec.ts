@@ -1,7 +1,7 @@
 import {Conjured} from "@/products/conjured";
 import {Product} from "@/products/product";
 
-describe('Conjured Item', () => {
+describe('Conjured Product', () => {
   it('should decrease quality by two when its quality is updated', () => {
     let initialQuality: number = 6;
     const conjuredItem: Product = new Conjured("Mana Cake", 3, initialQuality);

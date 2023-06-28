@@ -7,17 +7,15 @@ export class Conjured extends Product {
   }
 
   updateQuality(): void {
-    if (!this.qualityIsBelowZero()) {
-      this.quality = this.quality - 2
+    if (!this.qualityIsBelowMinimum()) {
+      super.updateQuality()
     }
 
-    if (this.qualityIsBelowZero()) {
-      this.quality = 0
-    }
+    super.updateQuality()
   }
 
   updateSellIn(): void {
-    this.sellIn--
+    super.updateSellIn()
   }
 
 }

@@ -2,7 +2,7 @@ import {Product} from "@/products/product";
 import {BackStage} from "@/products/backStage";
 import {BACK_STAGE_PASS} from "@/products/product-type-names";
 
-describe('Back Stage Item', () => {
+describe('Back Stage Product', () => {
   it('should create the product named Back Stage', () => {
     const backStage: Product = new BackStage(3, 6);
     expect(backStage.name).toBe(BACK_STAGE_PASS);

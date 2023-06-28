@@ -1,9 +1,9 @@
 import {GildedRose} from "@/gilded-rose";
-import {Item} from "@/item";
 import {Sulfuras} from "@/products/sulfuras";
 import {Conjured} from "@/products/conjured";
 import {AgedBrie} from "@/products/aged.brie";
 import {BackStage} from "@/products/backStage";
+import {GenericProduct} from "@/products/generic.product";
 
 describe('Gilded Rose', () => {
   it('should execute the app and match the golden master output', () => {
@@ -17,9 +17,9 @@ describe('Gilded Rose', () => {
 
 function appTest(): string {
   const items = [
-    new Item("+5 Dexterity Vest", 10, 20), //
+    new GenericProduct("+5 Dexterity Vest", 10, 20), //
     new AgedBrie(2, 0), //
-    new Item("Elixir of the Mongoose", 5, 7), //
+    new GenericProduct("Elixir of the Mongoose", 5, 7), //
     new Sulfuras(0), //
     new Sulfuras(-1),
     new BackStage(15, 20),

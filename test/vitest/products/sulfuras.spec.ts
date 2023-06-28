@@ -2,7 +2,7 @@ import {Product} from "@/products/product";
 import {Sulfuras} from "@/products/sulfuras";
 import {SULFURAS_HAND_OF_RAGNAROS} from "@/products/product-type-names";
 
-describe('Aged brie Item', () => {
+describe('Sulfuras Product', () => {
   it('should create the product named Sulfuras, hand of Ragnaros', () => {
     const sulfuras: Product = new Sulfuras(3);
     expect(sulfuras.name).toBe(SULFURAS_HAND_OF_RAGNAROS);
