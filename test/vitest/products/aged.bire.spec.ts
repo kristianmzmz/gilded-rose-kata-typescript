@@ -47,4 +47,14 @@ describe('Aged brie Item', () => {
     expect(agedBrie.quality).toBe(maximumQuality);
   });
 
+  it('should increase quality not above the maximum quality even if it has expired', () => {
+    let maximumQuality: number = 50;
+    let almostMaximumQuality: number = 49;
+    let expired: number = -1;
+    const agedBrie: Product = new AgedBrie(expired, almostMaximumQuality);
+    agedBrie.updateQuality()
+
+    expect(agedBrie.quality).toBe(maximumQuality);
+  });
+
 });

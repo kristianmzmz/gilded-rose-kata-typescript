@@ -1,6 +1,8 @@
 import {Item} from "@/item";
 
 export abstract class Product extends Item {
+  private readonly MAX_QUALITY: number = 50;
+
   updateQuality(): void {
     this.increaseQuality()
   }
@@ -9,8 +11,8 @@ export abstract class Product extends Item {
     this.sellIn--
   }
 
-  protected hasLessThanMaximumQuality() {
-    return this.quality < 50;
+  protected hasReachedMaximumQuality() {
+    return this.quality >= this.MAX_QUALITY;
   }
 
   protected sellInDateHasPassed() {
@@ -23,5 +25,9 @@ export abstract class Product extends Item {
 
   protected increaseQuality() {
     this.quality++
+  }
+
+  protected resetQualityToMaximum() {
+    this.quality = this.MAX_QUALITY
   }
 }

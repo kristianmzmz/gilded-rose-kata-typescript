@@ -7,11 +7,15 @@ export class AgedBrie extends Product{
   }
 
   updateQuality(): void {
-    if (this.hasLessThanMaximumQuality()) {
+    if (!this.hasReachedMaximumQuality()) {
       this.quality = this.quality + 1
       if (this.sellInDateHasPassed()) {
         this.quality = this.quality + 1
       }
+    }
+
+    if (this.hasReachedMaximumQuality()) {
+      this.resetQualityToMaximum()
     }
   }
 }
