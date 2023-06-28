@@ -47,4 +47,7 @@ export abstract class Product extends Item {
   protected resetQualityToMaximum(): void {
     this.quality = this.MAX_QUALITY
   }
+  protected resetQualityToMinimum(): void {
+    this.quality = this.MINIMUM_QUALITY
+  }
 }

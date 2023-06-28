@@ -51,13 +51,13 @@ describe('Back Stage Product', () => {
     expect(backStage.quality).toBe(maximumQuality);
   });
 
-  it('should increase quality not above the maximum quality even if it has expired', () => {
-    let maximumQuality: number = 50;
-    let almostMaximumQuality: number = 49;
+  it('should drop quality to the minimum when it has expired', () => {
+    let minimumQuality: number = 0;
+    let aRandomQuality: number = 9;
     let expired: number = -1;
-    const backStage: Product = new BackStage(expired, almostMaximumQuality);
+    const backStage: Product = new BackStage(expired, aRandomQuality);
     backStage.updateQuality()
 
-    expect(backStage.quality).toBe(maximumQuality);
+    expect(backStage.quality).toBe(minimumQuality);
   });
 });
