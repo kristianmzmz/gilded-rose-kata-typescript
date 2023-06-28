@@ -9,10 +9,14 @@ export class GildedRose {
 
   updateQuality(): Product[] {
     this.items.forEach((product: Product) => {
-      product.updateSellIn()
-      product.updateQuality()
+      this.updateProduct(product);
     })
 
     return this.items;
+  }
+
+  private updateProduct(product: Product): void {
+    product.updateSellIn()
+    product.updateQuality()
   }
 }
