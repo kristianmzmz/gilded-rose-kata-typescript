@@ -10,12 +10,3 @@ export class Item {
   }
 }
 
-export abstract class Product extends Item {
-  updateQuality(): void {
-    this.quality++
-  }
-  updateSellIn(): void{
-    this.sellIn--
-  }
-}
-

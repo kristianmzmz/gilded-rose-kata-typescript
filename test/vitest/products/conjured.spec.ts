@@ -1,5 +1,5 @@
 import {Conjured} from "@/products/conjured";
-import {Product} from "@/item";
+import {Product} from "@/products/product";
 
 describe('Conjured Item', () => {
   it('should decrease quality by two when its quality is updated', () => {

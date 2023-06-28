@@ -1,5 +1,5 @@
-import {Product} from "@/item";
 import {CONJURED} from "@/gilded-rose";
+import {Product} from "@/products/product";
 
 export class Conjured extends Product {
   constructor(name: string, sellIn: number, quality: number) {
@@ -7,11 +7,11 @@ export class Conjured extends Product {
   }
 
   updateQuality(): void {
-    if (this.quality > 0) {
+    if (!this.qualityIsBelowZero()) {
       this.quality = this.quality - 2
     }
 
-    if (this.quality < 0) {
+    if (this.qualityIsBelowZero()) {
       this.quality = 0
     }
   }

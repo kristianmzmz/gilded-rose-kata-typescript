@@ -1,12 +1,14 @@
 import {SULFURAS_HAND_OF_RAGNAROS} from "@/gilded-rose";
-import {Item, Product} from "@/item";
+import {Product} from "@/products/product";
 
-export class Sulfuras extends Item implements Product {
+export class Sulfuras extends Product {
   constructor(sellIn, quality) {
     super(SULFURAS_HAND_OF_RAGNAROS, sellIn, quality);
   }
 
-  updateQuality(): void {}
+  updateQuality(): void {
+  }
 
-  updateSellIn(): void {}
+  updateSellIn(): void {
+  }
 }
