@@ -1,6 +1,7 @@
 import {Item} from "@/item";
 
 export const SULFURAS_HAND_OF_RAGNAROS = 'Sulfuras, Hand of Ragnaros';
+export const CONJURED = 'Conjured ';
 
 export class GildedRose {
   items: Array<Item>;
@@ -72,7 +73,7 @@ export class GildedRose {
   }
 
   private isConjuredItem(i: number) {
-    return this.items[i].name.startsWith('Conjured');
+    return this.items[i].name.startsWith(CONJURED);
   }
 
   private isAgedBrie(i: number) {
