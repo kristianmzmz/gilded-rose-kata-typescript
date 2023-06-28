@@ -1,6 +1,6 @@
 import {GildedRose} from "@/gilded-rose";
 import {Item} from "@/item";
-import {Sulfuras} from "@/sulfuras";
+import {Sulfuras} from "@/products/sulfuras";
 
 describe('Gilded Rose', () => {
   it('should execute the app and match the golden master output', () => {
