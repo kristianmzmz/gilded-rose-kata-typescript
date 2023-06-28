@@ -28,34 +28,19 @@ export class GildedRose {
       } else if (this.isBackStagePass(i)) {
         this.updateBackStagePassQuality(i);
         this.decreaseSellInDate(i);
-        this.resetQualityToZero(i);
+        if (this.sellInDateHasPassed(i)) {
+          this.items[i].quality = 0
+        }
+      } else if (this.isSulfuras(i)) {
+
       } else {
-        if (!this.isAgedBrie(i) && !this.isBackStagePass(i)) {
-          if (this.items[i].quality > 0 && !this.isSulfuras(i)) {
-            this.items[i].quality = this.items[i].quality - 1
-          }
-        } else if (this.hasLessThanMaximumQuality(i)) {
-          this.items[i].quality = this.items[i].quality + 1
-          if (this.isBackStagePass(i)) {
-            if (this.items[i].sellIn < 11 && this.hasLessThanMaximumQuality(i)) {
-              this.items[i].quality = this.items[i].quality + 1
-            }
-            if (this.items[i].sellIn < 6 && this.hasLessThanMaximumQuality(i)) {
-              this.items[i].quality = this.items[i].quality + 1
-            }
-          }
+        if (this.hasQuality(i)) {
+          this.decreaseQuality(i);
         }
-        if (!this.isSulfuras(i)) {
-          this.items[i].sellIn = this.items[i].sellIn - 1;
-        }
-        if (this.sellInDateHasPassed(i) && !(this.isAgedBrie(i))) {
-          if (this.isBackStagePass(i)) {
-            this.items[i].quality = this.items[i].quality - this.items[i].quality
-          } else {
-            if (this.items[i].quality > 0 && !this.isSulfuras(i)) {
-              this.items[i].quality = this.items[i].quality - 1
-            }
-          }
+        this.decreaseSellInDate(i);
+
+        if (this.sellInDateHasPassed(i) && this.hasQuality(i)) {
+          this.decreaseQuality(i);
         }
       }
     }
@@ -63,22 +48,27 @@ export class GildedRose {
     return this.items;
   }
 
-  private resetQualityToZero(i: number) {
-    if (this.sellInDateHasPassed(i)) {
-      this.items[i].quality = 0
+  private decreaseQuality(i: number) {
+    this.items[i].quality--
+  }
+
+  private hasQuality(i: number) {
+    return this.items[i].quality > 0;
+  }
+  private updateBackStagePassQuality(i: number) {
+    if (this.hasLessThanMaximumQuality(i)) {
+      this.increaseQuality(i);
+      if (this.items[i].sellIn < 11 && this.hasLessThanMaximumQuality(i)) {
+        this.increaseQuality(i);
+      }
+      if (this.items[i].sellIn < 6 && this.hasLessThanMaximumQuality(i)) {
+        this.increaseQuality(i);
+      }
     }
   }
 
-  private updateBackStagePassQuality(i: number) {
-    if (this.hasLessThanMaximumQuality(i)) {
-      this.items[i].quality = this.items[i].quality + 1
-      if (this.items[i].sellIn < 11 && this.hasLessThanMaximumQuality(i)) {
-        this.items[i].quality = this.items[i].quality + 1
-      }
-      if (this.items[i].sellIn < 6 && this.hasLessThanMaximumQuality(i)) {
-        this.items[i].quality = this.items[i].quality + 1
-      }
-    }
+  private increaseQuality(i: number) {
+    this.items[i].quality++
   }
 
   private isSulfuras(i: number) {
@@ -115,7 +105,7 @@ export class GildedRose {
   }
 
   private decreaseSellInDate(i: number) {
-    this.items[i].sellIn = this.items[i].sellIn - 1
+    this.items[i].sellIn--
   }
 
   private updateConjuredItemQuality(i: number) {
