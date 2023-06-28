@@ -1,8 +1,6 @@
 import {AgedBrie} from "@/products/aged.brie";
-import {AGED_BRIE} from "@/gilded-rose";
-
-
 import {Product} from "@/products/product";
+import {AGED_BRIE} from "@/products/product-type-names";
 
 describe('Aged brie Item', () => {
   it('should create the product named Aged Brie', () => {
@@ -44,9 +42,9 @@ describe('Aged brie Item', () => {
   it('should increase quality not above the maximum quality', () => {
     let maximumQuality: number = 50;
     const agedBrie: Product = new AgedBrie(20, maximumQuality);
-
     agedBrie.updateQuality()
 
     expect(agedBrie.quality).toBe(maximumQuality);
   });
+
 });

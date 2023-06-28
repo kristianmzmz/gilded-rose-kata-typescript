@@ -1,7 +1,5 @@
-import {SULFURAS_HAND_OF_RAGNAROS} from "@/gilded-rose";
-
 import {Product} from "@/products/product";
-
+import {SULFURAS_HAND_OF_RAGNAROS} from "@/products/product-type-names";
 const SULFURAS_QUALITY = 80;
 
 export class Sulfuras extends Product {

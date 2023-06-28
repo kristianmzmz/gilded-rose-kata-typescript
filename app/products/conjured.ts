@@ -1,5 +1,5 @@
-import {CONJURED} from "@/gilded-rose";
 import {Product} from "@/products/product";
+import {CONJURED} from "@/products/product-type-names";
 
 export class Conjured extends Product {
   constructor(name: string, sellIn: number, quality: number) {

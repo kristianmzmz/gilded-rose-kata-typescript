@@ -1,9 +1,5 @@
 import {Item} from "@/item";
-
-export const SULFURAS_HAND_OF_RAGNAROS = 'Sulfuras, Hand of Ragnaros';
-export const CONJURED = 'Conjured ';
-
-export const AGED_BRIE = 'Aged Brie';
+import {AGED_BRIE, BACK_STAGE_PASS, CONJURED, SULFURAS_HAND_OF_RAGNAROS} from "@/products/product-type-names";
 
 export class GildedRose {
   items: Array<Item>;
@@ -71,7 +67,7 @@ export class GildedRose {
   }
 
   private isBackStagePass(i: number) {
-    return this.items[i].name == 'Backstage passes to a TAFKAL80ETC concert';
+    return this.items[i].name == BACK_STAGE_PASS;
   }
 
   private isConjuredItem(i: number) {

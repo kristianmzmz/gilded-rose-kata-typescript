@@ -2,7 +2,7 @@ import {Item} from "@/item";
 
 export abstract class Product extends Item {
   updateQuality(): void {
-    this.quality++
+    this.increaseQuality()
   }
 
   updateSellIn(): void {
@@ -19,5 +19,9 @@ export abstract class Product extends Item {
 
   protected qualityIsBelowZero() {
     return this.quality < 0;
+  }
+
+  protected increaseQuality() {
+    this.quality++
   }
 }

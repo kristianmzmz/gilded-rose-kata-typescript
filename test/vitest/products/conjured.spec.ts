@@ -22,7 +22,6 @@ describe('Conjured Item', () => {
     expect(conjuredItem.quality).toBe(0);
   });
 
-
   it('should decrease its sell in date by one when its sell in date is updated', () => {
     let initialSellIn: number = 3;
     const conjuredItem: Product = new Conjured("Mana Cake", initialSellIn, 6);

@@ -1,6 +1,6 @@
-import {SULFURAS_HAND_OF_RAGNAROS} from "@/gilded-rose";
 import {Product} from "@/products/product";
 import {Sulfuras} from "@/products/sulfuras";
+import {SULFURAS_HAND_OF_RAGNAROS} from "@/products/product-type-names";
 
 describe('Aged brie Item', () => {
   it('should create the product named Sulfuras, hand of Ragnaros', () => {

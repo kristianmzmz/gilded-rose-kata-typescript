@@ -1,7 +1,5 @@
-import {AGED_BRIE} from "@/gilded-rose";
-
-
 import {Product} from "@/products/product";
+import {AGED_BRIE} from "@/products/product-type-names";
 
 export class AgedBrie extends Product{
   constructor(sellIn: number, quality: number) {
