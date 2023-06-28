@@ -33,8 +33,4 @@ export class BackStage extends Product {
   private hasReachedSecondThreshold(): boolean {
     return this.sellIn < this.SECOND_THRESHOLD;
   }
-
-  updateSellIn(): void {
-    super.updateSellIn();
-  }
 }

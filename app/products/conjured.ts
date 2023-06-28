@@ -13,9 +13,4 @@ export class Conjured extends Product {
 
     super.updateQuality()
   }
-
-  updateSellIn(): void {
-    super.updateSellIn()
-  }
-
 }

@@ -6,6 +6,10 @@ export abstract class Product extends Item {
   private readonly MINIMUM_QUALITY: number = 0;
 
   updateQuality(): void {
+    if(this.sellInDateHasPassed()){
+      this.decreaseQuality()
+    }
+
     this.decreaseQuality()
 
     if (this.qualityIsBelowMinimum()) {
