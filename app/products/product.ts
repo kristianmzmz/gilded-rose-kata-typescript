@@ -8,10 +8,6 @@ export abstract class Product extends Item {
   updateQuality(): void {
     this.decreaseQuality()
 
-    if (this.hasReachedMaximumQuality()) {
-      this.resetQualityToMaximum()
-    }
-
     if (this.qualityIsBelowMinimum()) {
       this.quality = this.MINIMUM_QUALITY;
     }
