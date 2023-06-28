@@ -1,14 +1,6 @@
-export class Item {
-  name: string;
-  sellIn: number;
-  quality: number;
+import {Item, Product} from "@/item";
 
-  constructor(name, sellIn, quality) {
-    this.name = name;
-    this.sellIn = sellIn;
-    this.quality = quality;
-  }
-}
+export const SULFURAS_HAND_OF_RAGNAROS = 'Sulfuras, Hand of Ragnaros';
 
 export class GildedRose {
   items: Array<Item>;
@@ -72,7 +64,7 @@ export class GildedRose {
   }
 
   private isSulfuras(i: number) {
-    return this.items[i].name == 'Sulfuras, Hand of Ragnaros';
+    return this.items[i].name == SULFURAS_HAND_OF_RAGNAROS;
   }
 
   private isBackStagePass(i: number) {
