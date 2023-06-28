@@ -1,7 +1,7 @@
-import {Item, Product} from "@/item";
+import {Product} from "@/item";
 import {CONJURED} from "@/gilded-rose";
 
-export class Conjured extends Item implements Product {
+export class Conjured extends Product {
   constructor(name: string, sellIn: number, quality: number) {
     super(CONJURED + name, sellIn, quality)
   }

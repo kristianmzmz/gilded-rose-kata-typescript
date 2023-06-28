@@ -1,9 +1,10 @@
 import {Conjured} from "@/products/conjured";
+import {Product} from "@/item";
 
 describe('Conjured Item', () => {
   it('should decrease quality by two when its quality is updated', () => {
     let initialQuality: number = 6;
-    const conjuredItem: Conjured = new Conjured("Mana Cake", 3, initialQuality);
+    const conjuredItem: Product = new Conjured("Mana Cake", 3, initialQuality);
 
     conjuredItem.updateQuality()
 
@@ -13,7 +14,7 @@ describe('Conjured Item', () => {
 
   it('should not decrease its quality under zero', () => {
     let zeroQuality: number = 0;
-    const conjuredItem: Conjured = new Conjured("Mana Cake", 3, zeroQuality);
+    const conjuredItem: Product = new Conjured("Mana Cake", 3, zeroQuality);
 
     conjuredItem.updateQuality()
 
@@ -24,7 +25,7 @@ describe('Conjured Item', () => {
 
   it('should decrease its sell in date by one when its sell in date is updated', () => {
     let initialSellIn: number = 3;
-    const conjuredItem: Conjured = new Conjured("Mana Cake", initialSellIn, 6);
+    const conjuredItem: Product = new Conjured("Mana Cake", initialSellIn, 6);
 
     conjuredItem.updateSellIn()
 

@@ -10,8 +10,12 @@ export class Item {
   }
 }
 
-export interface Product {
-  updateQuality(): void;
-  updateSellIn(): void;
+export abstract class Product extends Item {
+  updateQuality(): void {
+    this.quality++
+  }
+  updateSellIn(): void{
+    this.sellIn--
+  }
 }
 

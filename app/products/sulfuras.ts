@@ -6,9 +6,7 @@ export class Sulfuras extends Item implements Product {
     super(SULFURAS_HAND_OF_RAGNAROS, sellIn, quality);
   }
 
-  updateQuality(): void {
-  }
+  updateQuality(): void {}
 
-  updateSellIn(): void {
-  }
+  updateSellIn(): void {}
 }
