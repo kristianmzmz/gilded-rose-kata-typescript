@@ -3,6 +3,8 @@ import {Item} from "@/item";
 export const SULFURAS_HAND_OF_RAGNAROS = 'Sulfuras, Hand of Ragnaros';
 export const CONJURED = 'Conjured ';
 
+export const AGED_BRIE = 'Aged Brie';
+
 export class GildedRose {
   items: Array<Item>;
 
@@ -77,7 +79,7 @@ export class GildedRose {
   }
 
   private isAgedBrie(i: number) {
-    return this.items[i].name == 'Aged Brie';
+    return this.items[i].name == AGED_BRIE;
   }
 
   private updateAgedBrieQuality(i: number) {
