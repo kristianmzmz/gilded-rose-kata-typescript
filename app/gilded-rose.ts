@@ -1,4 +1,4 @@
-import {Item, Product} from "@/item";
+import {Item} from "@/item";
 
 export const SULFURAS_HAND_OF_RAGNAROS = 'Sulfuras, Hand of Ragnaros';
 
