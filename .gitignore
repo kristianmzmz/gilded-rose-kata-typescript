@@ -6,3 +6,14 @@ vendor
 .idea
 *.iml
 csharpcore/GildedRoseTests/ApprovalTest.ThirtyDays.received.txt
+*.yarn.lock
+.DS_Store
+node_modules
+typings
+app/**/*.js
+app/**/*.js.map
+test/**/*.js
+test/**/*.js.map
+coverage
+.nyc_output
+*.lock
